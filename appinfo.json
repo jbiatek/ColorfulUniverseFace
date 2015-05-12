@@ -4,19 +4,19 @@
         ""
     ],
     "companyName": "pebble@frontys.com",
-    "longName": "Color stream watch face",
+    "longName": "Colorful Universe watchface",
     "projectType": "native",
     "resources": {
         "media": []
     },
     "sdkVersion": "3",
-    "shortName": "Color stream watch face",
+    "shortName": "Colorful Universe face",
     "targetPlatforms": [
         "basalt"
     ],
     "uuid": "6c39b728-b36e-42df-b8b7-f9e3c5d61baa",
     "versionLabel": "1.0",
     "watchapp": {
-        "watchface": false
+        "watchface": true
     }
 }
