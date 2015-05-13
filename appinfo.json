@@ -12,6 +12,7 @@
     "sdkVersion": "3",
     "shortName": "Colorful Universe face",
     "targetPlatforms": [
+        "aplite",
         "basalt"
     ],
     "uuid": "6c39b728-b36e-42df-b8b7-f9e3c5d61baa",
