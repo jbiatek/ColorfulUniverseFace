@@ -94,22 +94,6 @@ static void background_layer_draw(Layer *layer, GContext *ctx) {
   }
 }
 
-static void color_time_display() {
-  #ifdef PBL_COLOR
-  srand(s_rand_seed);
-  GColor rand_bg = random_color();
-  GColor rand_fg = invert(rand_bg);
-  text_layer_set_background_color(s_time_layer, rand_bg);
-  text_layer_set_text_color(s_time_layer, rand_fg);
-  #else
-  text_layer_set_background_color(s_time_layer, GColorBlack);
-  text_layer_set_text_color(s_time_layer, GColorWhite);
-  #endif
-}
-
-
-
-
 static void canvas_anim_update(Animation *animation, const AnimationProgress progress) {
   s_animation_counter = progress;
   layer_mark_dirty(s_canvas_layer);
@@ -150,7 +134,8 @@ static void main_window_load(Window *window) {
   
   // Create time TextLayer
   s_time_layer = text_layer_create(GRect(0, window_bounds.size.h - TIME_HEIGHT, TIME_WIDTH, TIME_HEIGHT));
-  color_time_display();
+  text_layer_set_background_color(s_time_layer, GColorBlack);
+  text_layer_set_text_color(s_time_layer, GColorWhite);
   text_layer_set_text(s_time_layer, "--:--");
   
   // Improve the layout to be more like a watchface
@@ -171,7 +156,6 @@ static void main_window_unload(Window *window) {
 static void update_time() {
   s_rand_seed = time(NULL);
   s_animation_counter = ANIMATION_NORMALIZED_MIN;
-  color_time_display();
   
   // Get a tm structure
   time_t temp = time(NULL); 

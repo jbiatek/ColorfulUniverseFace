@@ -4,13 +4,13 @@
         ""
     ],
     "companyName": "pebble@frontys.com",
-    "longName": "Colorful Universe watchface",
+    "longName": "Colorful Universe",
     "projectType": "native",
     "resources": {
         "media": []
     },
     "sdkVersion": "3",
-    "shortName": "Colorful Universe face",
+    "shortName": "Colorful Universe",
     "targetPlatforms": [
         "aplite",
         "basalt"
